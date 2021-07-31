@@ -7,30 +7,23 @@
 
 import SwiftUI
 
-class User: ObservableObject {
-    @Published var firstName = "Bilbo"
-    @Published var lastName = "Baggins"
+struct User: Codable {
+    var firstName: String
+    var lastName: String
 }
 
-struct SecondView: View {
-    @Environment(\.presentationMode) var presentationMode
-    var name: String
-    
-    var body: some View {
-        Button("Dismiss") {
-            self.presentationMode.wrappedValue.dismiss()
-        }
-    }
-}
+
 struct ContentView: View {
     
-    @State private var tapCount = UserDefaults.standard.integer(forKey: "Tap")
+    @State private var user = User(firstName: "Tailor", lastName: "Swift")
     
     var body: some View {
-        Button("tap count: \(tapCount)") {
-            self.tapCount += 1
-            UserDefaults.standard.set(self.tapCount,
-                                      forKey: "Tap")
+        Button("save user") {
+            let encoder = JSONEncoder()
+            
+            if let data = try? encoder.encode(self.user) {
+                UserDefaults.standard.set(data, forKey: "UserData")
+            }
         }
     }
 }
