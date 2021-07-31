@@ -24,15 +24,30 @@ struct SecondView: View {
 }
 struct ContentView: View {
     
-    @State private var showingSheet = false
+    @State private var numbers = [Int]()
+    @State private var currentNumber = 1
     
     var body: some View {
-        Button("Show sheet") {
-            self.showingSheet.toggle()
+        NavigationView {
+            VStack {
+                List {
+                    ForEach(numbers,
+                            id: \.self) {
+                        Text("\($0)")
+                    }.onDelete(perform: removeRows)
+                }
+                
+                Button("Add Number") {
+                    self.numbers.append(self.currentNumber)
+                    currentNumber += 1
+                }
+            }
+            .navigationBarItems(leading: EditButton())
         }
-        .sheet(isPresented: $showingSheet) {
-            SecondView(name: "@twostraws")
-        }
+    }
+    
+    func removeRows(at offsets: IndexSet) {
+        numbers.remove(atOffsets: offsets)
     }
 }
 
