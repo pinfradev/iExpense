@@ -13,6 +13,7 @@
 		AB2A9B6326A66A22005887B1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AB2A9B6226A66A22005887B1 /* Assets.xcassets */; };
 		AB2A9B6626A66A22005887B1 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AB2A9B6526A66A22005887B1 /* Preview Assets.xcassets */; };
 		AB2A9B6926A66A22005887B1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AB2A9B6726A66A22005887B1 /* LaunchScreen.storyboard */; };
+		ABF35FDB26C04328001CBE80 /* AddView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABF35FDA26C04328001CBE80 /* AddView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		AB2A9B6526A66A22005887B1 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		AB2A9B6826A66A22005887B1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		AB2A9B6A26A66A22005887B1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		ABF35FDA26C04328001CBE80 /* AddView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +65,7 @@
 				AB2A9B6726A66A22005887B1 /* LaunchScreen.storyboard */,
 				AB2A9B6A26A66A22005887B1 /* Info.plist */,
 				AB2A9B6426A66A22005887B1 /* Preview Content */,
+				ABF35FDA26C04328001CBE80 /* AddView.swift */,
 			);
 			path = iExpense;
 			sourceTree = "<group>";
@@ -145,6 +148,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				ABF35FDB26C04328001CBE80 /* AddView.swift in Sources */,
 				AB2A9B5D26A66A20005887B1 /* AppDelegate.swift in Sources */,
 				AB2A9B5F26A66A20005887B1 /* SceneDelegate.swift in Sources */,
 				AB2A9B6126A66A20005887B1 /* ContentView.swift in Sources */,
